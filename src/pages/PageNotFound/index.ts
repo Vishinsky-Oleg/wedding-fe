@@ -1,3 +1,3 @@
-import PageNotFoundPage from './PageNotFound';
+import PageNotFound from './PageNotFound';
 
-export { PageNotFoundPage };
+export { PageNotFound };
