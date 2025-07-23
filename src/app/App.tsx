@@ -23,7 +23,7 @@ const App: FC = () => {
       if (isPolling) {
         return (
           <Poll
-            id={currentUser._id}
+            currentUser={currentUser}
             onStopPollButtonClick={() => onChangePollStatusTo(false)}
           />
         );
@@ -31,7 +31,7 @@ const App: FC = () => {
         return (
           <Home
             onStartPollButtonClick={() => onChangePollStatusTo(true)}
-            pollIsPassed={currentUser.isPolled}
+            currentUser={currentUser}
           />
         );
       }

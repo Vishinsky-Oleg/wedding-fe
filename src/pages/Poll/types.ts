@@ -1,4 +1,6 @@
+import type { TCurrentGuest } from 'types/index.ts';
+
 export type TSurvey = {
-  id: string;
+  currentUser: TCurrentGuest;
   onStopPollButtonClick: () => void;
 };

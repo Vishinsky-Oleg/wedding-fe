@@ -35,6 +35,12 @@
       "hooks/*": [
         "./hooks/*"
       ],
+      "types/*": [
+        "./types/*"
+      ],
+      "utils/*": [
+        "./utils/*"
+      ],
       "components/*": [
         "./components/*"
       ]

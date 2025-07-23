@@ -1,15 +1,6 @@
 import axios, { type AxiosError } from 'axios';
 import { useLayoutEffect, useState } from 'react';
-
-export type TCurrentGuest = {
-  _id: string;
-  name: string;
-  isPolled: boolean;
-  withC: boolean;
-  gen: 's' | 'h' | 't';
-  res: boolean;
-  createdAt: number;
-};
+import type { TCurrentGuest } from 'types';
 
 export const getCurrentGuest = (userID: string) => {
   const [errorCode, setErrorCode] = useState<number | null>(null);
@@ -19,12 +10,11 @@ export const getCurrentGuest = (userID: string) => {
   const getUserFromBE = async () => {
     setIsLoading(true);
     try {
-      const currentUser = await axios.get<TCurrentGuest>(
+      const currentUser = await axios.get<{ guest: TCurrentGuest }>(
         `http://localhost:3001/api/guest/${userID}`
       );
       if (currentUser.data) {
-        setCurrentUser(currentUser.data);
-        console.log(currentUser.data);
+        setCurrentUser(currentUser.data.guest);
       }
     } catch (error) {
       const axiosError = error as AxiosError;
