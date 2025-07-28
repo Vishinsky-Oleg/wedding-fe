@@ -1,11 +1,11 @@
 import { useParams } from 'react-router';
-import { getCurrentGuest } from 'hooks/getCurrentGuest.tsx';
-import { PageNotFound } from 'pages/PageNotFound';
+import { useGetCurrentGuest } from 'hooks/useGetCurrentGuest.tsx';
+import { Info } from 'pages/Info';
 import { type FC, useState } from 'react';
 import { Poll } from 'pages/Poll';
-import { Home } from 'pages/Home';
 import type { TParams } from 'app/types.ts';
-import CSS from './App.module.scss';
+import Loader from 'components/Loader/Loader.tsx';
+import { Home } from 'pages/Home';
 
 const App: FC = () => {
   const { id } = useParams<TParams>();
@@ -14,21 +14,19 @@ const App: FC = () => {
   const onChangePollStatusTo = (isPolling: boolean) => setIsPolling(isPolling);
 
   if (id) {
-    const { currentUser, errorCode, isLoading } = getCurrentGuest(id);
+    const { currentUser, errorCode, isLoading } = useGetCurrentGuest(id);
 
     if (errorCode === 401) {
-      return <div>Перейдите по ссылке в правильным идентификатором!</div>;
+      return <Info variant={'wrong-id'} />;
     } else if (isLoading) {
-      return <div>Is loading</div>;
+      return <Loader />;
     } else if (currentUser) {
       if (isPolling) {
         return (
-          <div className={CSS.app__poll_container}>
-            <Poll
-              currentUser={currentUser}
-              onStopPollButtonClick={() => onChangePollStatusTo(false)}
-            />
-          </div>
+          <Poll
+            currentUser={currentUser}
+            onStopPollButtonClick={() => onChangePollStatusTo(false)}
+          />
         );
       } else {
         return (
@@ -39,11 +37,11 @@ const App: FC = () => {
         );
       }
     } else {
-      return <PageNotFound />;
+      return <Info variant={'page-not-found'} />;
     }
   }
 
-  return <PageNotFound />;
+  return <Info variant={'page-not-found'} />;
 };
 
 export default App;

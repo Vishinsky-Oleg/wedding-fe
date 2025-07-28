@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router';
-import { PageNotFound } from 'pages/PageNotFound';
+import { Info } from 'pages/Info';
 import { App } from 'app';
 import './main.scss';
 
@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route path=":id" element={<App />} />
-        <Route path="*" element={<PageNotFound />} />
+        <Route path="*" element={<Info variant={'page-not-found'} />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

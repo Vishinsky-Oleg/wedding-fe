@@ -2,90 +2,11 @@
 @use 'styles/variables';
 
 .welcome {
-  @include mixins.greatVibes;
-  &__hero {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    &::before {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 0px;
-      width: 350px;
-      height: 330px;
-      background-image: url("assets/euk2.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      @media (min-width: 550px) {
-        width: 400px;
-        height: 400px;
-      }
-      @media (min-width: 750px) {
-        width: 550px;
-        height: 430px;
-      }
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      left: -100px;
-      bottom: -100px;
-      width: 350px;
-      height: 480px;
-      background-image: url("assets/euk5.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      @media (min-width: 550px) {
-        width: 400px;
-        height: 600px;
-        bottom: -200px;
-      }
-      @media (min-width: 750px) {
-        width: 650px;
-        height: 780px;
-        bottom: -200px;
-      }
-    }
-    &__ampersand {
-      position: absolute;
-      @include mixins.cormorantFont;
-      font-size: 200px;
-      font-weight: bold;
-      color: #b4b3b3;
-      opacity: 0.3;
-      left: 45%;
-      top: 33%;
-    }
-    &__names {
-      @include mixins.cormorantFont;
-      text-transform: uppercase;
-      color: variables.$accent-color;
-      font-weight: 500;
-      font-size: 50px;
-      width: 250px;
-      text-align: left;
-      @media (min-width: 550px) {
-        font-size: 60px;
-        width: 350px;
-      }
-      @media (min-width: 750px) {
-        font-size: 60px;
-        width: 350px;
-      }
-    }
-    &__date {
-      @include mixins.cormorantFont;
-      text-transform: uppercase;
-      color: variables.$accent-color;
-      font-weight: 500;
-      font-size: 20px;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 
   &__text_block {
     color: variables.$accent-color;
@@ -93,16 +14,17 @@
     display: flex;
     gap: 14px;
     flex-direction: column;
-    margin: 36px auto;
+    margin: 36px 0;
     max-width: 800px;
+    padding: 32px;
     @media (min-width: 550px) {
-      margin: 116px auto;
+      margin: 116px 0 0;
     }
     &>p {
       width: 100%;
       text-align: center;
     }
-    padding: 32px;
+
     &>p:nth-child(4) {
       text-align: right;
     }

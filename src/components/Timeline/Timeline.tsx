@@ -16,11 +16,15 @@ const Timeline = () => {
       </span>
       <span className={classNames(CSS.point, CSS.third)}>
         <div className={CSS.point__time}>21:00</div>
-        <div className={CSS.point__about}>Финальная часть вечера</div>
+        <div className={CSS.point__about}>Праздничный торт</div>
       </span>
       <span className={classNames(CSS.point, CSS.fourth)}>
         <div className={CSS.point__time}>22:00</div>
         <div className={CSS.point__about}>Финал мероприятия</div>
+      </span>
+      <span className={classNames(CSS.point, CSS.fifth)}>
+        <div className={CSS.point__time}>19:00</div>
+        <div className={CSS.point__about}>Танцы до упаду</div>
       </span>
     </div>
   );

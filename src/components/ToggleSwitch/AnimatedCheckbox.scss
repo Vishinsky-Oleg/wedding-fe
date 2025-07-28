@@ -69,7 +69,7 @@
 
   .hidden-checkbox:checked + .check-box,
   .check-box.checked {
-    border-color: #34b93d;
+    border-color: variables.$accent-color;
   }
 
   .hidden-checkbox:checked + .check-box::after,

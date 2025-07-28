@@ -2,7 +2,7 @@ import axios, { type AxiosError } from 'axios';
 import { useLayoutEffect, useState } from 'react';
 import type { TCurrentGuest } from 'types';
 
-export const getCurrentGuest = (userID: string) => {
+export const useGetCurrentGuest = (userID: string) => {
   const [errorCode, setErrorCode] = useState<number | null>(null);
   const [currentUser, setCurrentUser] = useState<TCurrentGuest | null>(null);
   const [isLoading, setIsLoading] = useState(false);

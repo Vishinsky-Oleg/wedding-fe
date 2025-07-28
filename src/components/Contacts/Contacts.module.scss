@@ -1,0 +1,23 @@
+.contacts {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto 32px;
+  width: 100%;
+  position: relative;
+  max-width: 500px;
+  z-index: 6;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    left: 20px;
+    top:-100px;
+    height: 130px;
+    background-image: url("assets/euk1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+}
