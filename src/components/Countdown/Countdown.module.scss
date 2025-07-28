@@ -13,9 +13,7 @@ $borderRadius: 13px;
     justify-content: center;
     flex-direction: column;
     position: relative;
-    //background-image: url("assets/border-for-countdown.png");
-    //background-repeat: no-repeat;
-    //background-size: cover;
+    margin: 36px auto;
     &::before {
       content: "";
       position: absolute;

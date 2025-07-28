@@ -1,7 +1,7 @@
 @use 'styles/mixins';
 
 .container {
-  margin: 0 auto;
+  margin: 86px auto 36px;
   padding: 20px;
   color: #000;
   text-align: center;
@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
+  width: 350px;
 
 }
 
@@ -23,13 +24,26 @@
   position: absolute;
   color: white;
   left: 70px;
-  top: 50px;
+  top: 90px;
   width: 200px;
-  font-size: 27px;
+  font-size: 24px;
+  font-weight: bold;
   margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-underline-offset: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    top: -150px;
+    width: 350px;
+    height: 210px;
+    background-image: url("assets/euk4.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   @include mixins.cormorantFont;
 }
 
