@@ -7,11 +7,12 @@ export const getCurrentGuest = (userID: string) => {
   const [currentUser, setCurrentUser] = useState<TCurrentGuest | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const getUserFromBE = async () => {
     setIsLoading(true);
     try {
       const currentUser = await axios.get<{ guest: TCurrentGuest }>(
-        `http://localhost:3001/api/guest/${userID}`
+        `${API_BASE_URL}/api/guest/${userID}`
       );
       if (currentUser.data) {
         setCurrentUser(currentUser.data.guest);

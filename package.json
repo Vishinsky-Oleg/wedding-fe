@@ -10,11 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.10.0",
+    "@hookform/resolvers": "^5.2.0",
+    "antd": "^5.26.6",
+    "axios": "^1.11.0",
     "dayjs": "^1.11.13",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router": "^7.7.0"
+    "react-hook-form": "^7.61.1",
+    "react-router": "^7.7.0",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
