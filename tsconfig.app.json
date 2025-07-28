@@ -46,6 +46,12 @@
       ],
       "assets/*": [
         "./assets/*"
+      ],
+      "styles/*": [
+        "./styles/*"
+      ],
+      "constants/*": [
+        "./constants/*"
       ]
     }
   },

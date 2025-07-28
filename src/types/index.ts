@@ -9,3 +9,10 @@ export type TCurrentGuest = {
   res: boolean;
   createdAt: number;
 };
+
+export type TDifference = {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+};

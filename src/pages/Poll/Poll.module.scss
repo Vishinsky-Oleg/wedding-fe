@@ -1,3 +1,5 @@
+@use 'styles/variables';
+
 .form {
   margin: 25px auto 0;
   max-width: 600px;
@@ -15,13 +17,8 @@
     &>p {
       color: rgba(31, 80, 22, 0.79);
     }
-    background: hsla(169, 76%, 48%, 1);
+    background: rgb(216, 219, 214);
 
-    background: linear-gradient(90deg, hsla(169, 76%, 48%, 1) 0%, hsla(67, 87%, 82%, 1) 100%);
-
-    background: -moz-linear-gradient(90deg, hsla(169, 76%, 48%, 1) 0%, hsla(67, 87%, 82%, 1) 100%);
-
-    background: -webkit-linear-gradient(90deg, hsla(169, 76%, 48%, 1) 0%, hsla(67, 87%, 82%, 1) 100%);
   }
   &__question_block {
     display: flex;
@@ -56,6 +53,7 @@
   background-color: #ffffff;
   font-size: 16px;
   resize: none;
+  color: variables.$accent-color;
   &:hover:not(:disabled) {
     border-color: #707D60; /* Change border color on hover */
   }
@@ -76,13 +74,13 @@
 }
 
 .button {
-  background-color: #c2fbd7;
+  background-color: rgb(216, 219, 214);
   &.white {
     background-color: #ffffff;
   }
   border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-  color: green;
+  box-shadow: rgba(33, 145, 76, 0.2) 0 -25px 18px -14px inset, rgba(29, 126, 66, 0.15) 0 1px 2px, rgba(25, 108, 57, 0.15) 0 2px 4px, rgba(23, 105, 54, 0.15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: variables.$accent-color;
   cursor: pointer;
   display: inline-block;
   font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
@@ -96,7 +94,7 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   &:hover {
-    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    box-shadow: rgba(31, 129, 68, 0.35) 0 -25px 18px -14px inset, rgba(24, 107, 56, 0.25) 0 1px 2px, rgba(18, 77, 41, 0.25) 0 2px 4px, rgba(19, 80, 42, 0.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
     transform: scale(1.05) rotate(-1deg);
   }
 }

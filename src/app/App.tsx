@@ -5,6 +5,7 @@ import { type FC, useState } from 'react';
 import { Poll } from 'pages/Poll';
 import { Home } from 'pages/Home';
 import type { TParams } from 'app/types.ts';
+import CSS from './App.module.scss';
 
 const App: FC = () => {
   const { id } = useParams<TParams>();
@@ -22,10 +23,12 @@ const App: FC = () => {
     } else if (currentUser) {
       if (isPolling) {
         return (
-          <Poll
-            currentUser={currentUser}
-            onStopPollButtonClick={() => onChangePollStatusTo(false)}
-          />
+          <div className={CSS.app__poll_container}>
+            <Poll
+              currentUser={currentUser}
+              onStopPollButtonClick={() => onChangePollStatusTo(false)}
+            />
+          </div>
         );
       } else {
         return (
