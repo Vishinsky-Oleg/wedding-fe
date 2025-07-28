@@ -2,6 +2,7 @@ import { type FC, useEffect, useState } from 'react';
 import type { THome } from 'pages/Home/types.ts';
 import { getMainText } from 'utils/getMainText.ts';
 import { getDifference } from 'utils/getDifference.ts';
+import { Timeline } from 'components/Timeline';
 
 const Home: FC<THome> = ({ onStartPollButtonClick, currentUser }) => {
   const [untilWedding, setUntilWedding] = useState<null | string>(null);
@@ -22,6 +23,7 @@ const Home: FC<THome> = ({ onStartPollButtonClick, currentUser }) => {
       {!currentUser.isPolled && (
         <button onClick={onStartPollButtonClick}>Surveying</button>
       )}
+      <Timeline />
     </div>
   );
 };

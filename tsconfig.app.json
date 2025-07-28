@@ -43,6 +43,9 @@
       ],
       "components/*": [
         "./components/*"
+      ],
+      "assets/*": [
+        "./assets/*"
       ]
     }
   },

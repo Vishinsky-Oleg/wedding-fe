@@ -1,8 +1,9 @@
 .form {
-  margin: 0 auto;
+  margin: 25px auto 0;
   max-width: 600px;
+  min-width: 270px;
   border-radius: 15px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   overflow: hidden;
   &__heading {
     padding: 15px;
@@ -26,11 +27,12 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
+    padding: 12px;
     &_note {
       font-size: 13px;
       color: rgba(31, 80, 22, 0.79);
     }
-    padding: 12px;
+
   }
   &__buttons {
     padding: 16px;

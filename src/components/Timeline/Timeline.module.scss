@@ -1,0 +1,74 @@
+@mixin font {
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+}
+
+.container {
+  font-family: 'Times New Roman', serif;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #000;
+  text-align: center;
+  height: 400px;
+  width: auto;
+  background-image: url("assets/one.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+position: relative;
+
+}
+
+.date {
+  font-size: 18px;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.title {
+  position: absolute;
+  color: white;
+  left: 70px;
+  top: 50px;
+  width: 200px;
+  font-size: 27px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-underline-offset: 5px;
+  @include font;
+}
+
+.point {
+  max-width: 90px;
+  position: absolute;
+  &.first {
+    left: 30px;
+    top: 172px
+  }
+  &.second {
+    left: 170px;
+    top: 172px
+  }
+  &.third {
+    left: 60px;
+    top: 321px
+  }
+  &.fourth {
+    left: 200px;
+    top: 321px
+  }
+  &__time {
+    @include font;
+    font-weight: 500;
+    font-size: 24px;
+    max-width: 90px;
+  }
+  &__about {
+    @include font;
+    max-width: 90px;
+  }
+}
