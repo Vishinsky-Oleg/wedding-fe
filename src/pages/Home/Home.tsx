@@ -3,6 +3,7 @@ import type { THome } from 'pages/Home/types.ts';
 import { Timeline } from 'components/Timeline';
 import { Countdown } from 'components/Countdown';
 import Welcome from 'components/Welcome/Welcome.tsx';
+import { Location } from 'components/Location';
 
 const Home: FC<THome> = ({ onStartPollButtonClick, currentUser }) => {
   return (
@@ -13,6 +14,7 @@ const Home: FC<THome> = ({ onStartPollButtonClick, currentUser }) => {
       />
       <Countdown />
       <Timeline />
+      <Location />
     </main>
   );
 };
