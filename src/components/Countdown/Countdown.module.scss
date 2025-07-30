@@ -5,7 +5,7 @@ $borderRadius: 13px;
 .countdown{
   &__outer_container {
     height: 350px;
-    width: 500px;
+    width: 400px;
     border-radius: $borderRadius;
     padding: 15px;
     display: flex;
@@ -17,24 +17,24 @@ $borderRadius: 13px;
     &::before {
       content: "";
       position: absolute;
-      width: 450px;
+      width: 350px;
       left: 20px;
       top:-20px;
       height: 130px;
       background-image: url("assets/euk1.png");
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
     }
     &::after {
       content: "";
       position: absolute;
-      width: 450px;
+      width: 350px;
       left: 20px;
       bottom:-20px;
       height: 130px;
       background-image: url("assets/euk1.png");
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
       transform: rotate(180deg);
     }
 

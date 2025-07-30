@@ -55,7 +55,7 @@ const Poll: FC<TSurvey> = ({ currentUser, onStopPollButtonClick }) => {
         requestBody
       );
       if (pollIsConducted) {
-        onStopPollButtonClick();
+        window.location.reload();
       }
     } catch {
       setError(true);
