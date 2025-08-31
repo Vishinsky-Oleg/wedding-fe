@@ -12,6 +12,7 @@ const Location: FC = () => {
       </div>
       <div className={CSS.location__text_block}>
         <p className={CSS.location__heading}>Место торжества</p>
+        <p className={CSS.location__address}>Ресторан "8 Миля"</p>
         <p className={CSS.location__address}>
           М-5 Урал, 977-й километр, 1, Тольятти
         </p>
